@@ -5,14 +5,13 @@ use subs qq(dump);
 
 # to make Test::Pod::Coverage happy
 
-=for Pod::Coverage .*
-
-=cut
 
 require Exporter;
 *import = \&Exporter::import;
 @EXPORT = qw(dd_ruby ddx_ruby);
 @EXPORT_OK = qw(dump_ruby pp_ruby quote_ruby);
+
+our $VERSION = '0.02'; # VERSION
 
 $DEBUG = 0;
 
@@ -495,9 +494,15 @@ sub quote {
 
 __END__
 
+=pod
+
 =head1 NAME
 
-Data::Dump::Ruby - Pretty printing of data structures as Ruby code
+Data::Dump::Ruby
+
+=head1 VERSION
+
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -588,6 +593,11 @@ printouts of state within programs.
 
 =back
 
+=for Pod::Coverage .*
+
+=head1 NAME
+
+Data::Dump::Ruby - Pretty printing of data structures as Ruby code
 
 =head1 BUGS/LIMITATIONS
 
@@ -597,7 +607,6 @@ Thus, C<eval>ing them will not reproduce the original routine.
 Regexes in Ruby by default are multilines (e.g. /^foo/ in Perl means /\Afoo/ in
 Ruby and /^foo/m in Perl means /^foo/ in Ruby), this is not adjusted yet.
 
-
 =head1 SEE ALSO
 
 L<Data::Dump> and L<Data::Dump::PHP> (from which this codebase is based)
@@ -605,13 +614,11 @@ L<Data::Dump> and L<Data::Dump::PHP> (from which this codebase is based)
 L<JSON>, L<YAML> - Another alternative to exchange data with Ruby (and
 other languages) is to export/import via YAML and JSON.
 
-
 =head1 ACKNOWLEDGEMENTS
 
 Data::Dump::Ruby is a quick hack. I simply copied the code from
 L<Data::Dump::PHP>, which was copied from Gisle Ass' wonderful C<Data::Dump> and
 changed only whatever is necessary.
-
 
 =head1 AUTHORS
 
@@ -626,5 +633,16 @@ The C<Data::Dump::Ruby> module is written by Steven Haryanto
 
 This library is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.
+
+=head1 AUTHOR
+
+Steven Haryanto <stevenharyanto@gmail.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2013 by Steven Haryanto.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut

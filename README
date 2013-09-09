@@ -1,5 +1,8 @@
 NAME
-    Data::Dump::Ruby - Pretty printing of data structures as Ruby code
+    Data::Dump::Ruby
+
+VERSION
+    version 0.02
 
 SYNOPSIS
      use Data::Dump::Ruby qw(dump_ruby ddx_ruby);
@@ -81,6 +84,9 @@ DESCRIPTION
         line number where it was called. This is meant to be useful for
         debug printouts of state within programs.
 
+NAME
+    Data::Dump::Ruby - Pretty printing of data structures as Ruby code
+
 BUGS/LIMITATIONS
     Code references will be displayed as simply "(Proc.new {})" when dumped.
     Thus, "eval"ing them will not reproduce the original routine.
@@ -112,4 +118,13 @@ AUTHORS
 
     This library is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.
+
+AUTHOR
+    Steven Haryanto <stevenharyanto@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2013 by Steven Haryanto.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
 

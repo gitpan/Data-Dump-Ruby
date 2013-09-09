@@ -271,9 +271,15 @@ sub errno {
 
 __END__
 
+=pod
+
 =head1 NAME
 
-Data::Dump::Ruby::Trace - Helpers to trace function and method calls
+Data::Dump::Ruby::Trace
+
+=head1 VERSION
+
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -395,6 +401,10 @@ prefix), and the function returns a blessed object, then the variable
 name will be used as prefix and the returned object automatically
 traced.
 
+=head1 NAME
+
+Data::Dump::Ruby::Trace - Helpers to trace function and method calls
+
 =head1 SEE ALSO
 
 L<Data::Dump::Ruby>
@@ -407,5 +417,16 @@ Copyright 2011 Steven Haryanto.
 
 This library is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.
+
+=head1 AUTHOR
+
+Steven Haryanto <stevenharyanto@gmail.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2013 by Steven Haryanto.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
